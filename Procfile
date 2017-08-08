@@ -1,1 +1,1 @@
-web: gunicorn scraping.wsgi --log-file -
+web: gunicorn webscraping.wsgi --log-file -
