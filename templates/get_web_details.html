@@ -1,0 +1,59 @@
+<!DOCKTYPE html>
+<html>
+    {% block header %}
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 550px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+              background-color: #f1f1f1;
+              height: 100%;
+            }
+
+            /* On small screens, set height to 'auto' for the grid */
+            @media screen and (max-width: 767px) {
+              .row.content {height: auto;}
+            }
+
+            .top-bottom-margin{
+                margin:10 0;
+            }
+          </style>
+    </head>
+    {% endblock %}
+    {% block content %}
+    <body>
+    <div class="container-fluid">
+    <div class="row content">
+        <div class="row">
+            <div class="col-sm-12 top-bottom-margin">
+            {% for row in html %}
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                <div class="panel-heading">{{row.Symbol}}</div>
+                    <div class="panel-body">
+                        <p class="ltp">LTP - {{row.LTP}}</p>
+                        <p class="change">%change - {{row.Change}}</p>
+                        <p class="traded_qty">Traded Qty - {{row.TradedQty}}</p>
+                        <p class="value">Value(in Lakhs) - {{row.ValueinLakhs}}</p>
+                        <p class="open">Open - {{row.Open}}</p>
+                        <p class="high">High - {{row.High}}</p>
+                        <p class="low">Low - {{row.Low}}</p>
+                        <p class="prev_close">Pev Close - {{row.PrevClose}}</p>
+                        <p class="exp_date">Exp Date - {{row.LatestExDate}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+    </body>
+    {% endblock %}
+</html>
