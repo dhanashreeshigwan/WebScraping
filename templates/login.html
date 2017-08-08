@@ -1,0 +1,11 @@
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+      <!--Username: <input type="text">-->
+      <!--Password: <input type="password">  -->
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}

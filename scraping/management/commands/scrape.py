@@ -5,6 +5,9 @@ from django.core.cache import cache
 class Command(BaseCommand):
 
 	def handle(self, *args, **options):
-		scraper = WebScraper()
-		data = scraper.get_nifty_50_table()
-		cache.set('nifty_50_table', data, timeout=None)
+		set_scraper_info()
+
+def set_scraper_info():
+	scraper = WebScraper()
+	data = scraper.get_nifty_50_table()
+	cache.set('nifty_50_table', data, timeout=None)
