@@ -15,5 +15,4 @@ requests==2.18.3
 selenium==3.4.3
 urllib3==1.22
 vine==1.1.4
-GDAL==1.10.1
 gunicorn==19.7.1
