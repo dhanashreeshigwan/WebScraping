@@ -26,11 +26,8 @@ class WebScraper(object):
         soup = BeautifulSoup(self.browser.page_source, 'html.parser')
         table = soup.find("table", {"id": "topGainers"})
         headers = [th.get_text(strip=True)for th in table.find_all('th')]
-        headers = [w.replace(' ', '') for w in headers]
-        headers = [w.replace('%', '') for w in headers]
-        headers = [w.replace('.', '') for w in headers]
-        headers = [w.replace('(', '') for w in headers]
-        headers = [w.replace(')', '') for w in headers]
+        headers = [w.replace("!@#$%^&*()[]{};:,./<>?\|`~-=_+", " ") for w in headers]
+
         response = []
 
         for tr in table.find_all('tr'):

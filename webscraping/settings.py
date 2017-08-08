@@ -89,17 +89,26 @@ WSGI_APPLICATION = 'webscraping.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'daqn0l3f9gckic',
-        'USER': 'onsxvwsbhgwvcm',
-        'PASSWORD': 'f3bae18137cdb5181d746e8462d403a914d3c38f5282ceb7c0699a4ae1f8d4d9',
-        'HOST': 'ec2-54-83-48-188.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': '',
+    },
+# 'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'daqn0l3f9gckic',
+#         'USER': 'onsxvwsbhgwvcm',
+#         'PASSWORD': 'f3bae18137cdb5181d746e8462d403a914d3c38f5282ceb7c0699a4ae1f8d4d9',
+#         'HOST': 'ec2-54-83-48-188.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
 }
+
 
 
 
